@@ -13,7 +13,12 @@ const App = () => {
       ) : (
         <h1 style={styleP2}>{myNmae}</h1>
       )}
-      ;
+      ; names:
+      <div>
+        {names.map((el) => (
+          <p> {el} </p>
+        ))}
+      </div>
     </Fragment>
   );
 };
