@@ -4,21 +4,16 @@ const App = () => {
   const styleP1 = { color: "green", marginTop: "150px" };
   const styleP2 = { color: "red", marginTop: "150px" };
 
-  const myNmae = "ali";
-  const names = ["adem" , "mona" ,"ali"];
+  const myNmae = "hoda";
+  const names = ["adem", "mona", "ali"];
   return (
     <Fragment>
-      {myNmae === "ali"     
-        ? (   <h1 style={styleP1}>    
-              {myNmae}
-              </h1>
-          ):
-      (<h1> </h1>)
-
-      };
- 
-
-  
+      {myNmae === "ali" ? (
+        <h1 style={styleP1}>{myNmae}</h1>
+      ) : (
+        <h1 style={styleP2}>{myNmae}</h1>
+      )}
+      ;
     </Fragment>
   );
 };
