@@ -1,15 +1,19 @@
 import React from "react";
 //  ArrData ==> refer to prop that come from App2 that array
 
-const Cards = ({ ArrData }) => {
+const Cards = ({ ArrData, type }) => {
   console.log(ArrData);
   const recoveryData = ArrData.map(({ name, age, address, phone }, idx) => (
-    <div className="container" key={idx}>
+    <div
+      className="container"
+      key={idx}
+      style={{ backgroundColor: type === "boys" ? "pink" : "gray" }}
+    >
       <div>
         <span> Nmae </span> : {name}{" "}
       </div>
       <div>
-        <span> age </span> : {age}{" "}
+        <span> agee </span> : {age}{" "}
       </div>
       <div>
         <span> address </span> : {address}{" "}

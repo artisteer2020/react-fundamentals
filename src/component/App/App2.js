@@ -53,10 +53,10 @@ const App2 = () => {
     <Fragment>
       <div className="maincontainer">
         <h1> Boyes Data ... </h1>
-        <Cards ArrData={Boys} />
+        <Cards ArrData={Boys} type="boys" />
 
         <h1> Girls Data ... </h1>
-        <Cards ArrData={Girls} />
+        <Cards ArrData={Girls} type="girls" />
       </div>
     </Fragment>
   );
