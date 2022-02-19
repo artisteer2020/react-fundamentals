@@ -56,7 +56,7 @@ const App2 = () => {
         <Cards ArrData={Boys} />
 
         <h1> Girls Data ... </h1>
-        <Cards ArrData={Girls} />
+        <Cards ArrData={Girls} color="pink" />
       </div>
     </Fragment>
   );
