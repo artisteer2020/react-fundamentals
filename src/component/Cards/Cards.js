@@ -1,4 +1,5 @@
 import React from "react";
+import "./Cards.css";
 //  ArrData ==> refer to prop that come from App2 that array
 
 const Cards = ({ ArrData, type }) => {
@@ -10,10 +11,10 @@ const Cards = ({ ArrData, type }) => {
       style={{ backgroundColor: type === "boys" ? "pink" : "gray" }}
     >
       <div>
-        <span> Nmae </span> : {name}{" "}
+        <span> Nmaee </span> : {name}{" "}
       </div>
       <div>
-        <span> agee </span> : {age}{" "}
+        <span> age</span> : {age}{" "}
       </div>
       <div>
         <span> address </span> : {address}{" "}
