@@ -1,12 +1,12 @@
 import React from "react";
-import "./Cards.css";
+import style from "./Cards.module.css";
 //  ArrData ==> refer to prop that come from App2 that array
 
 const Cards = ({ ArrData, type }) => {
   console.log(ArrData);
   const recoveryData = ArrData.map(({ name, age, address, phone }, idx) => (
     <div
-      className="container"
+      className={style.container}
       key={idx}
       style={{ backgroundColor: type === "boys" ? "pink" : "gray" }}
     >
