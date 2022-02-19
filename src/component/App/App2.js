@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
+import Cards from "../Cards/Cards";
 import "./App2.css";
-import Cards from "./Cards";
 
 const App2 = () => {
   const Boys = [
