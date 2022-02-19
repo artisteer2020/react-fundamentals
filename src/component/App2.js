@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import "./App2.css";
+import Cards from "./Cards";
 
 const App2 = () => {
   const DataUsers = [
@@ -24,26 +25,12 @@ const App2 = () => {
   ];
   // Each child in a list shoud have a unique "key" prop
   // نحتاجه في الدوم الوهمي لتتبع الدفات والعاناصر
-  const recoveryData = DataUsers.map(({ name, age, address, phone }, idx) => (
-    <div className="container" key={idx}>
-      <div>
-        <span> Nmae </span> : {name}{" "}
-      </div>
-      <div>
-        <span> age </span> : {age}{" "}
-      </div>
-      <div>
-        <span> address </span> : {address}{" "}
-      </div>
-      <div>
-        <span> salary </span> : {phone}{" "}
-      </div>
-    </div>
-  ));
 
   return (
     <Fragment>
-      <div className="maincontainer">{recoveryData}</div>
+      <div className="maincontainer">
+        <Cards ArrData={DataUsers} />
+      </div>
     </Fragment>
   );
 };
