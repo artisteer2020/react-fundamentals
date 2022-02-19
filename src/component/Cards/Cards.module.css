@@ -1,0 +1,19 @@
+.container {
+  padding: 20px;
+  width: 250px;
+  border: 3px solid teal;
+  margin: 40px;
+  position: relative;
+}
+.logo {
+  width: 35px;
+  height: 35px;
+  background-color: darkgoldenrod;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
