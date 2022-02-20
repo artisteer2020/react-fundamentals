@@ -2,8 +2,7 @@ import React from "react";
 import Style from "./Cards.module.css";
 //  ArrData ==> refer to prop that come from App2 that array
 
-const Cards = ({ ArrData, type }) => {
-  console.log(ArrData);
+const Cards = ({ ArrData, type, deletFun }) => {
   const recoveryData = ArrData.map(({ name, age, address, phone }, idx) => (
     <div
       className={Style.container}
@@ -22,8 +21,16 @@ const Cards = ({ ArrData, type }) => {
       <div>
         <span> salary </span> : {phone}{" "}
       </div>
-
-      <div className={Style.logo}> logo </div>
+      {/*  with on click event I Should Use arrow Fun (To prevent Immeditely invoce )
+         
+        */}
+      <div
+        className={Style.logo}
+        onClick={(e) => deletFun(e.target.className, idx)}
+      >
+        {" "}
+        logo
+      </div>
     </div>
   ));
 

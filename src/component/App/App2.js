@@ -11,7 +11,7 @@ const App2 = () => {
       name: "mohamed",
       age: 30,
       address: "minia",
-      phone: "0110212250"
+      phone: "015452250"
     },
     {
       name: "ali",
@@ -92,16 +92,31 @@ const App2 = () => {
   // ];
   // Each child in a list shoud have a unique "key" prop
   // نحتاجه في الدوم الوهمي لتتبع الدفات والعاناصر
+  const DeletItem = (event, itemIndex) => {
+    //  const RemainingElements = state.filter((el ,idx ) => idx !== itemIndex);
+    //  setState(RemainingElements);
+
+    //  Use Setstate as afunction
+    // privestate like => state => Arr
+    // according privestate as a Arr
+    // I can make it fillter and out put Data
+    setState((prevState) => {
+      return prevState.filter((el, idx) => idx !== itemIndex);
+    });
+    //  setState((x) => {
+    //     return x.filter((el ,idx) => idx !== itemIndex)
+    //  });
+  };
 
   return (
     <Fragment>
       <div className="maincontainer">
         <h1> Boyes Data ... </h1>
-        <Cards ArrData={state} type="boys" />
+        <Cards ArrData={state} type="boys" deletFun={DeletItem} />
 
         {/* // use arr Girls that holding Data */}
-        <h1> Girls Data ... </h1>
-        <Cards ArrData={state1} type="girls" />
+        {/* <h1> Girls Data ... </h1>
+        <Cards ArrData={state1} type="girls" deletFun = {DeletItem}  /> */}
         {/* 
         // use arr Boys Arr that holding Data
          <h1> Boyes Data ... </h1>
