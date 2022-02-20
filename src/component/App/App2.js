@@ -93,16 +93,20 @@ const App2 = () => {
   // Each child in a list shoud have a unique "key" prop
   // نحتاجه في الدوم الوهمي لتتبع الدفات والعاناصر
   const DeletItem = (event, itemIndex) => {
-    //  const RemainingElements = state.filter((el ,idx ) => idx !== itemIndex);
-    //  setState(RemainingElements);
+    const RemainingElements = state.filter((el, idx) => idx !== itemIndex);
+    //  setState  => Object من خلال
+    setState(RemainingElements);
 
     //  Use Setstate as afunction
     // privestate like => state => Arr
     // according privestate as a Arr
     // I can make it fillter and out put Data
-    setState((prevState) => {
-      return prevState.filter((el, idx) => idx !== itemIndex);
-    });
+
+    // setState((prevState) => {
+    //   // setState  => Function من خلال
+    //   return prevState.filter((el, idx) => idx !== itemIndex);
+    // });
+
     //  setState((x) => {
     //     return x.filter((el ,idx) => idx !== itemIndex)
     //  });
